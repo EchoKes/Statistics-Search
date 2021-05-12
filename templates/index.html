@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Digital Marketing Trends Searcher</title>
+  <link rel= "stylesheet" type="text/css" href= "{{ url_for('static', filename='main.css')}}">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+  integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+  <h1>Quick Digital Marketing Trends Finder</h1>
+  <p>This site will return a list of links containing at least 2 statistics.</p>
+  <p><strong>Results may vary and inaccurate at times..</strong></p>
+
+  <div id="searchBar">
+    <form autocomplete="off" method="GET">
+      <input type="search" placeholder="search.." name="q" id="search">
+      <input class="btn btn-primary" type="submit">
+    </form> 
+  </div>
+  
+  <div id="cont">
+    <button class="btn btn-outline-secondary btn-block" id="clr">CLEAR</button>
+    <table class="table table-bordered table-hover">
+      <tr>
+        <th>No. of Statistics</th>
+        <th>Link</th>
+      </tr>
+      
+      {% for data in jsonText %}
+        <tr>
+          <td>{{data.num}}</td>
+          <td><a href="{{ data.link }}" target="_blank">{{data.link}}</a></td>
+        </tr>
+      {% endfor %}
+
+      
+    </table>
+  </div>
+  
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#clr").click(function(){
+      $("#cont").empty();
+      window.history.pushState({}, null, 'http://10.195.72.101:4444/')
+  });
+});
+</script>
+</html>
