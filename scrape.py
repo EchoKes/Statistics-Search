@@ -47,7 +47,9 @@ def main(search):
                         'http://webcache.googleusercontent.', 
                         'https://policies.google.',
                         'https://support.google.',
-                        'https://maps.google.'  )
+                        'https://maps.google.',
+                        'http://scholar.google.com',
+                        'https://www.youtube.com'  )
 
     for url in links[:]:
         if url.startswith(google_domains):
