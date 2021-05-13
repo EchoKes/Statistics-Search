@@ -93,7 +93,7 @@ def index():
     j = ""
     if q:
         j = main(q)
-    return render_template("index.html", jsonText = j)
+    return render_template("index.html", jsonText = j, query = q, queryNum = len(j))
 
 if __name__ == "__main__":
     app.debug = True
