@@ -49,7 +49,10 @@ def main(search):
                         'https://support.google.',
                         'https://maps.google.',
                         'http://scholar.google.com',
-                        'https://www.youtube.com'  )
+                        'https://www.youtube.com',
+                        'https://en.wikipedia.org',
+                        'https://yt.be'
+                          )
 
     for url in links[:]:
         if url.startswith(google_domains):
