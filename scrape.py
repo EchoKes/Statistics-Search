@@ -91,9 +91,11 @@ app = Flask(__name__)
 def index():
     q = request.args.get('q')
     j = ""
+    s = ""
     if q:
         j = main(q)
-    return render_template("index.html", jsonText = j, query = q, queryNum = len(j))
+        s = 'Search results for "{0}" : {1}'.format(q, str(len(j)))
+    return render_template("index.html", jsonText = j, qString = s)
 
 if __name__ == "__main__":
     app.debug = True

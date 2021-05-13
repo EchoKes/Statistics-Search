@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Digital Marketing Trends Searcher</title>
   <link rel= "stylesheet" type="text/css" href= "{{ url_for('static', filename='main.css')}}">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
@@ -22,8 +23,8 @@
   </div>
   
   <div id="cont">
+    <h5 id="imp">{{qString}}</h5>
     <button class="btn btn-outline-secondary btn-block" id="clr">CLEAR</button>
-    <h4>Search results for "{{query}}" : {{queryNum}}</h4>
     <table class="table table-bordered table-hover">
       <tr>
         <th>No. of Statistics</th>
