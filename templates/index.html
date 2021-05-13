@@ -15,33 +15,37 @@
   <p>This site will return a list of links containing at least 2 statistics.</p>
   <p><strong>Results may vary and inaccurate at times..</strong></p>
 
-  <div id="searchBar">
+  <div class="container-fluid" id="searchBar">
     <form autocomplete="off" method="GET">
-      <input type="search" placeholder="search.." name="q" id="search">
+      <input class="form-control" type="search" placeholder="search.." name="q" id="search">
       <input class="btn btn-primary" type="submit">
     </form> 
   </div>
   
-  <div id="cont">
+  <div class="container-fluid" id="cont">
     <h5 id="imp">{{qString}}</h5>
-    <button class="btn btn-outline-secondary btn-block" id="clr">CLEAR</button>
-    <table class="table table-bordered table-hover">
-      <tr>
-        <th>No. of Statistics</th>
-        <th>Link</th>
-      </tr>
-      
-      {% for data in jsonText %}
-        <tr>
-          <td>{{data.num}}</td>
-          <td><a href="{{ data.link }}" target="_blank">{{data.link}}</a></td>
-        </tr>
-      {% endfor %}
-
-      
-    </table>
-  </div>
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-10">
+        <button class="btn btn-outline-secondary" id="clr">CLEAR</button>
+        <table class="table table-bordered table-hover">
+          <tr>
+            <th>No. of Statistics</th>
+            <th>Link</th>
+          </tr>
+          
+          {% for data in jsonText %}
+            <tr>
+              <td>{{data.num}}</td>
+              <td><a href="{{ data.link }}" target="_blank">{{data.link}}</a></td>
+            </tr>
+          {% endfor %}
   
+        </table>
+      </div>
+      <div class="col-1"></div>
+    </div>
+  </div>
 </body>
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>

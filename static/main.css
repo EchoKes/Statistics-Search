@@ -11,35 +11,28 @@ h1, h5, p {
   vertical-align: middle;
 }
 
-#cont {
-  margin: 0 5%;
-}
-
 #clr {
-  width: 100%;
-  margin: 5px;
+  width: inherit;
+  margin: 0;
+  margin-bottom: 0.5em;
 }
 
 #searchBar, form{
+  justify-content: center;
   text-align: center;
-  margin: 1em;
   padding: 8px;
-
-}
-
-#search {
-  padding: 2px 12px;
+  display: flex;
+  margin: 0 auto;
 }
 
 .btn {
-  margin: 0px 5px;
-  width: 5em;
-  display: inline-block;
+  margin-left: 0.5em;
 } 
 
 #search {
-  width: 30em;
-  height: 36px;
+  width: 35em;
+  padding: 2px 12px;
+  height: 2em;
   border: 1px solid #00B4CC;
   background: white;
   color: rgb(33, 33, 33);
@@ -50,7 +43,7 @@ h1, h5, p {
 
 table {
   border-collapse: collapse;
-  width: 100%;
+  width: inherit;
 }
 
 th, td {

@@ -98,6 +98,6 @@ def index():
     return render_template("index.html", jsonText = j, qString = s)
 
 if __name__ == "__main__":
-    app.debug = False
-    app.run()
+    app.debug = True
+    app.run(host="0.0.0.0", port=1004)
 
