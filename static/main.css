@@ -1,3 +1,9 @@
+.content {
+  max-width: fit-content;
+  margin: auto;
+  padding: 10px;
+}
+
 h1 {
   padding-top: 2em;
 }
@@ -19,18 +25,21 @@ h1, h5, p {
 
 #searchBar, form{
   justify-content: center;
-  text-align: center;
-  padding: 8px;
   display: flex;
+  text-align: center;
+  padding: 5px;
   margin: 0 auto;
 }
 
 .btn {
+  margin: 0 auto;
   margin-left: 0.5em;
 } 
 
+
 #search {
-  width: 35em;
+  width: 40em;
+  margin: 0 auto;
   padding: 2px 12px;
   height: 2em;
   border: 1px solid #00B4CC;
@@ -43,7 +52,7 @@ h1, h5, p {
 
 table {
   border-collapse: collapse;
-  width: inherit;
+  
 }
 
 th, td {
